@@ -53,7 +53,7 @@ int main() {
 
 	std::cout << abs(-5) << '\n';
 	std::cout << abs(-7.4) << '\n';
-
+	std::cout << abs(-1.1f) << '\n';
 
 
 
