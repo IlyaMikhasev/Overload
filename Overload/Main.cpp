@@ -1,18 +1,18 @@
-// Персональный шаблон
+// РџРµСЂСЃРѕРЅР°Р»СЊРЅС‹Р№ С€Р°Р±Р»РѕРЅ
 #include <iostream>
 
-//встроенная фукнция
+//РІСЃС‚СЂРѕРµРЅРЅР°СЏ С„СѓРєРЅС†РёСЏ
 inline int sum(int num1, int num2) {
 	return num1 + num2;
 }
-//т.к. функцию не удается встроить, она становится обычной функцией.
+//С‚.Рє. С„СѓРЅРєС†РёСЋ РЅРµ СѓРґР°РµС‚СЃСЏ РІСЃС‚СЂРѕРёС‚СЊ, РѕРЅР° СЃС‚Р°РЅРѕРІРёС‚СЃСЏ РѕР±С‹С‡РЅРѕР№ С„СѓРЅРєС†РёРµР№.
 inline int sum_AB(int A, int B) {
 	int res = 0;
 	for (int i = A; i <= B; i++)
 		res += i;
 	return res;
 }
-//перегруженная функция
+//РїРµСЂРµРіСЂСѓР¶РµРЅРЅР°СЏ С„СѓРЅРєС†РёСЏ
 int max_val(int num1, int num2) {
 	std::cout << "INT\n";
 	return num1 > num2 ? num1 : num2;
@@ -29,7 +29,7 @@ float max_val(float num1, float num2) {
 	std::cout << "FLOAT\n";
 	return num1 > num2 ? num1 : num2;
 }
-//Шаблонная функция
+//РЁР°Р±Р»РѕРЅРЅР°СЏ С„СѓРЅРєС†РёСЏ
 template <typename T>
 T abs(T num) {
 	return num < 0 ? -num : num;
@@ -38,7 +38,7 @@ int main() {
 	setlocale(LC_ALL, "Russian");
 	int n, m;
 	/*
-	std::cout << "Введите два числа: ";
+	std::cout << "Р’РІРµРґРёС‚Рµ РґРІР° С‡РёСЃР»Р°: ";
 	std::cin >> n >> m;
 	std::cout << sum(n, m) << '\n';
 	std::cout << sum_AB(n,m) << '\n';
